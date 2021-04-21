@@ -48,5 +48,15 @@ public class userValidation {
         } while (!flag);
         System.out.println("Valid Contact Number");
 
+	//password validation
+	Scanner pc = new Scanner(System.in);
+        do {
+            String passwordPattern = "^[A-Za-z0-9_@$]+$";
+            System.out.print("Enter a Password: ");
+            String input = pc.next();
+            flag = input.matches(passwordPattern);
+            if (!flag) System.out.println("Invalid Password!");
+        } while (!flag);
+        System.out.println("Valid Password");
     }
 }
