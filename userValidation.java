@@ -36,5 +36,17 @@ public class userValidation {
             if (!flag) System.out.println("Invalid email Id!");
         } while (!flag);
         System.out.println("Valid email Id");
+
+	//contact number validation
+	Scanner cc = new Scanner(System.in);
+        do {
+            String contactPattern = "^[0-9]{10}$";
+            System.out.print("Input Contact Number: ");
+            String input = cc.next();
+            flag = input.matches(contactPattern);
+            if (!flag) System.out.println("Invalid Contact Number!");
+        } while (!flag);
+        System.out.println("Valid Contact Number");
+
     }
 }
