@@ -58,5 +58,16 @@ public class userValidation {
             if (!flag) System.out.println("Invalid Password!");
         } while (!flag);
         System.out.println("Valid Password");
+
+	//password to have Atleast one uppercase letter
+	Scanner zc = new Scanner(System.in);
+        do {
+            String passwordPattern = "(?=.*[A-Z])([A-Za-z0-9_@$])+$";
+            System.out.print("Enter a Password: ");
+            String input = zc.next();
+            flag = input.matches(passwordPattern);
+            if (!flag) System.out.println("Invalid Password!");
+        } while (!flag);
+        System.out.println("Valid Password");
     }
 }
