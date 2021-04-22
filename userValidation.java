@@ -40,7 +40,7 @@ public class userValidation {
 	//contact number validation
 	Scanner cc = new Scanner(System.in);
         do {
-            String contactPattern = "^[0-9]{10}$";
+            String contactPattern = "^[1-9]{2}\\s{0,1}[1-9]{1}[0-9]{9}$";
             System.out.print("Input Contact Number: ");
             String input = cc.next();
             flag = input.matches(contactPattern);
