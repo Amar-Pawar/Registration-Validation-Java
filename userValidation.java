@@ -69,5 +69,15 @@ public class userValidation {
             if (!flag) System.out.println("Invalid Password!");
         } while (!flag);
         System.out.println("Valid Password");
+
+	Scanner dc = new Scanner(System.in);
+        do {
+            String passwordPattern = "(?=.*[A-Z])(?=.*[0-9])([A-Z0-9a-z_@$]).{8,20}$";
+            System.out.print("Enter a Password: ");
+            String input = dc.next();
+            flag = input.matches(passwordPattern);
+            if (!flag) System.out.println("Invalid Password!");
+        } while (!flag);
+        System.out.println("Valid Password");
     }
 }
