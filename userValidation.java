@@ -40,7 +40,7 @@ public class userValidation {
 	//contact number validation
 	Scanner cc = new Scanner(System.in);
         do {
-            String contactPattern = "^[0-9]{10}$";
+            String contactPattern = "^[1-9]{2}\\s{0,1}[1-9]{1}[0-9]{9}$";
             System.out.print("Input Contact Number: ");
             String input = cc.next();
             flag = input.matches(contactPattern);
@@ -54,6 +54,17 @@ public class userValidation {
             String passwordPattern = "^[A-Za-z0-9_@$]+$";
             System.out.print("Enter a Password: ");
             String input = pc.next();
+            flag = input.matches(passwordPattern);
+            if (!flag) System.out.println("Invalid Password!");
+        } while (!flag);
+        System.out.println("Valid Password");
+
+	//password to have Atleast one uppercase letter
+	Scanner zc = new Scanner(System.in);
+        do {
+            String passwordPattern = "(?=.*[A-Z])([A-Za-z0-9_@$])+$";
+            System.out.print("Enter a Password: ");
+            String input = zc.next();
             flag = input.matches(passwordPattern);
             if (!flag) System.out.println("Invalid Password!");
         } while (!flag);
